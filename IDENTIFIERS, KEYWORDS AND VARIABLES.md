@@ -16,7 +16,7 @@
 
 ## Public, Protected and Private Attributes
 
-> <span style='color:skyblue;font-weight:bold'>Public</span> attributes can only be accessed inside of the class definition.
+> <span style='color:skyblue;font-weight:bold'>Public</span> attributes can  be accessed anywhere inside or outside of the class definition.
 
 > <span style='color:skyblue;font-weight:bold'>Protected</span> (restricted) attributes should only be used under certain conditions.
 
@@ -117,3 +117,10 @@
 
       # assigning multiple values to multiple variables
       a, b, c = 12, 13, 14
+
+### Deleting a variable:
+      a = 5 
+      print(a) # output: 5
+      del a
+      print(a) # output: NameError: 'a' is not defined
+

@@ -15,7 +15,7 @@
 > In python, we use the print() function  to output data to the standard output device.
 
 #### Syntax: 
-> print(*objects, sep="", end="\n", file=sys.stdout, flush=False)
+> print(*objects, sep=" ", end="\n", file=sys.stdout, flush=False)
 
 >  - Here, <span style='color:black;font-weight:bold'>objects</span> is the values to be printed.
 > - The <span style='color:black;font-weight:bold'>sep</span> is separator which is used between the values. It defaults into a space character.
