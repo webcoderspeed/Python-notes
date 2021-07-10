@@ -1,7 +1,8 @@
 # Python Identifiers:
+
 > A python identifier is a name used to identify a variable, function, class, module or other objects.
 
-> An Identifier starts with a letter A-Z or a-z or an underscore( _ ) followed by zero or more letters, underscore & digits (0 to 9).
+> An Identifier starts with a letter A-Z or a-z or an underscore( \_ ) followed by zero or more letters, underscore & digits (0 to 9).
 
 #### The following are naming conventions for Python Identifiers:
 
@@ -13,15 +14,13 @@
 
 > If the Identifier starts and ends with two trailing underscores the identifier is a language-defined special name.
 
-
 ## Public, Protected and Private Attributes
 
-> <span style='color:skyblue;font-weight:bold'>Public</span> attributes can  be accessed anywhere inside or outside of the class definition.
+> <span style='color:skyblue;font-weight:bold'>Public</span> attributes can be accessed anywhere inside or outside of the class definition.
 
 > <span style='color:skyblue;font-weight:bold'>Protected</span> (restricted) attributes should only be used under certain conditions.
 
-> <span style='color:skyblue;font-weight:bold'>Private</span> attributes can only be accessed inside of the class definition. 
-
+> <span style='color:skyblue;font-weight:bold'>Private</span> attributes can only be accessed inside of the class definition.
 
 <table  border='2'>
   <tr style='background: rgba(35, 52, 238, 0.735)'>
@@ -36,7 +35,7 @@
   </tr>
   <tr>
     <td>_name</td>
-    <td>Protected</td>
+      <td>Protected</td>
     <td>Protected attributes should be used outside of the class definition, unless inside of a subclass definition</td>
   </tr>
   <tr>
@@ -46,15 +45,17 @@
   </tr>
 </table>
 
-> Also, the <span style='color:skyblue;font-weight:bold'>str.isidentifier() </span>  function will tell us if a string is a valid identifier. This is available since Python 3.0.
+> Also, the <span style='color:skyblue;font-weight:bold'>str.isidentifier() </span> function will tell us if a string is a valid identifier. This is available since Python 3.0.
 
       '__99__'.isidentifier()
->Output: True
 
- ## Python Keywords
- > Keywords are reserved words and you cannot use them as constant or variable or any other identifier names.
+> Output: True
 
- > All the python keywords contain lowercase letters only.
+## Python Keywords
+
+> Keywords are reserved words and you cannot use them as constant or variable or any other identifier names.
+
+> All the python keywords contain lowercase letters only.
 
 <table>
     <tr>
@@ -100,27 +101,30 @@
 </table>
 
 ## Variables
+
 > Variables are nothing but reserved memory locations to store values. This means when you create a variable, you reserve some space in memory.
 
 > Based on the datatype of a variable, the interpreter allocates memory & decided what can be stored in the reserved memory.
 
 ### Assigning values to variables:
+
 > Python variables do not need explicit declaration ton reserve memory space. The declaration happens automatically when you assign a value to variable. The equal sign ( = ) is used to assign value to variables.
 
-##### Example: 
-      area_code = 110074 # type - int 
+##### Example:
+
+      area_code = 110074 # type - int
       name = "Speed" # type - str (string)
-      floating_variable = 12.25 # type - float 
+      floating_variable = 12.25 # type - float
 
       # assigning single values to multiple variables
-        a, b, c = 1 
+        a, b, c = 1
 
       # assigning multiple values to multiple variables
       a, b, c = 12, 13, 14
 
 ### Deleting a variable:
-      a = 5 
+
+      a = 5
       print(a) # output: 5
       del a
       print(a) # output: NameError: 'a' is not defined
-

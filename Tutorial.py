@@ -1,3 +1,7 @@
-data = [10, 20, 30]
+a_dict = {
+    'roll_no': '65',
+    'name': 'Sanjeev Sharma',
+    'branch': 'CSE'
+}
 
-print(data[::-1])
+print(a_dict.values())

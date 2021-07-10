@@ -1,4 +1,5 @@
 # DataTypes:
+
 > The data stored in memory can be of many types.
 
 > Python has various standard datatypes that are used to define the operations possible on them & the storage method for each of them.
@@ -12,47 +13,52 @@
 > 5. Dictionary
 
 ### Number:
+
 > Number datatypes store numeric values.
 
 > Number objects are created when you assign a value to them.
-eg: num1 = 5
+> eg: num1 = 5
 
 > <span style='color:black;font-weight:bold;'>Note</span>: You can also delete the reference to a object by using the del statement.
 
 ##### Syntax:
+
 > del var1[, var2[, var3[...,varN]]]
 
 #### Python Supports 4 different numerical types:
-> 1) int (signed integers)
-> 2) long (long integers, they can also be represtend in octal and hexadecimal)
-> 3) float (floating point real values)
-> 4) complex (complex Numbers)
 
-### Strings: 
+> 1. int (signed integers)
+> 2. long (long integers, they can also be represtend in octal and hexadecimal)
+> 3. float (floating point real values)
+> 4. complex (complex Numbers)
+
+### Strings:
+
 > Strings in python are identified as a contiguous set of characters represented in the quotation marks, python allows for either pairs of single or double quotes.
 
 > Subsets of strings cn be taken using the slice operator([] and [:]) with indexes starting at 0 in the beginning of the string & working from -1 at the end.
 
-> The plus(+) sign is the string concatenation operator & asterisk(*) is the repetition operator.
+> The plus(+) sign is the string concatenation operator & asterisk(\*) is the repetition operator.
 
 ##### Example:
+
       s = 'Hello'
       print(s) # prints complete string
 
       # using the escape character when writting string in multiple line
-      s = "Hello" \ 
+      s = "Hello" \
           "World"
 
-      # writting string in multiple line using 
+      # writting string in multiple line using
       ''' ''' or """ """
       s = '''
-          This is 
+          This is
           a
           multiline string
           '''
 
       s = """
-          This is 
+          This is
           a
           multiline string
           """
@@ -66,7 +72,7 @@ eg: num1 = 5
       print(s[0]) # prints first character of the string.
 
       print(s[2:5]) # prints characters starting from 2nd position to 5-1 (4th) position
-      
+
       print(s[2:]) # prints string starting from 2nd index
 
       print(s*2) # prints string two times
@@ -80,9 +86,8 @@ eg: num1 = 5
       # Hello Speed Hello Speed
       # Hello Speed Sharma
 
-    
 ###### More Examples on String Function:
-        
+
         s = "Hello World"
 
         print(s.capitalize()) # output: Hello World
@@ -103,15 +108,16 @@ eg: num1 = 5
 
         print(s.endswith('d')) # output: True
 
-
 ### Lists:
+
 > Lists are the most versatile of python's compound datatypes.
 
 > A list containings items seperated by commas & enclosed within brackets([]).
 
 > List are similar to array, one difference between them is that all the items, belonging to a list can be of different datatypes.
 
-###### Example: 
+###### Example:
+
         a_list = [1,2.5,'Speed']
         b_list = [5, 'CSE']
 
@@ -128,9 +134,11 @@ eg: num1 = 5
         print(a_list+b_list) # prints the concatenated lists
 
 #### Updating List:
+
 > You can update single or multiple elements of list by giving the slice on the left-hand side of the assignment operator, and you can add to elements in a list with the append() method.
 
 ###### Example:
+
         # updating elements of list
         list1 = [10, 'SPEED', '9.8', 'CSE']
         print(f"list1[1]: {list1[1]}")  # output: list1[1]: SPEED
@@ -144,9 +152,11 @@ eg: num1 = 5
         print(data)  # output:[1, 2, 3, 4]
 
 #### Delete list elements:
+
 > To remove a list element, you can use either the del statement if you know exactly which element you deleting.
 
 ##### Example:
+
         data = [10, 'SPEED', '9.8', 'CSE']
         print("Before deleting list element are: ", data)
         del data[0]
@@ -156,7 +166,8 @@ eg: num1 = 5
         # Before deleting list element are:  [10, 'SPEED', '9.8', 'CSE']
         # After deleting list element are:  ['SPEED', '9.8', 'CSE']
 
-#### Basic List Operation : 
+#### Basic List Operation :
+
 > 1. len() : Find the length of the list.
 
         data = [10, 20, 30]
@@ -169,8 +180,8 @@ eg: num1 = 5
         b_list = [30, 40]
         print(a_list + b_list) # prints the concatenated list
 
-> 3. \* : Repeatition of list elements 
-        
+> 3. \* : Repeatition of list elements
+
         a_list = [10, 20, 30]
         print(a_list*2) # prints the list 2-times
 
@@ -183,18 +194,21 @@ eg: num1 = 5
 ##### Built-in Functions and Methods
 
 > 1. max() : This method returns the element from the list with maximum value.
+
 ###### Syntax: max(list)
 
         data = [10,20,30]
         print(max(data)) # output: 30
 
 > 2. min() : This method returns the element from the list with minimum value.
+
 ###### Syntax: min(list)
 
         data = [10,20,30]
         print(min(data)) # output: 10
 
 > 3. list() : This method takes sequence types and converts them to lists. This is used to convert any given object into list.
+
 ###### Syntax: list(obj)
 
         tuple1 = (10, 20, 30)
@@ -232,7 +246,7 @@ eg: num1 = 5
         data = [10, 20, 30]
         print(data.index(20)) # output: 1
 
-> 8. insert()  : This method inserts obj into list at offset index.
+> 8. insert() : This method inserts obj into list at offset index.
 
 ###### Syntax: listObject.insert(index, obj)
 
@@ -265,10 +279,347 @@ eg: num1 = 5
 
 > 12. sort() : This method sorts obj of list, use compare function if given.
 
-###### Syntax: listObject([function]) 
+###### Syntax: listObject([function])
 
         data = [5, 10, 9, 4, 3, 7 , 4, 1 ]
         data.sort()
         print(data) # output: [1, 3, 4, 4, 5, 7, 9, 10]
 
+### Tuples:
 
+> A Tuple us another sequence datatypes that is similar to the list. A tuple consists of a number of values seperated by commas. Unlike lists, tuple are enclosed within parenthesis.
+
+##### The main difference between lists and tuples are:
+
+<table>
+        <tr>
+        <th>List</th>
+        <th>Tuple</th>
+        </tr>
+        <tr>
+        <td>Lists are enclosed in brackets []</td>
+        <td>Tuples are enclosed in parenthesis ()</td>
+        </tr>
+        <tr>
+        <td>Lists can be updated</td>
+        <td>Tuples cannot be updated because tuples are immutable in nature but if the tuple consists of mutable child then the child can be updated. <br> eg: A list inside a tuple can be updated.
+        </td>
+        </tr>
+</table>
+
+#### Tuples can be thought of as read-only lists.
+
+###### Example:
+
+        a_tuple = (1, 2.5, 'Speed')
+        b_tuple = (5, 'CSE', [1, 2])
+
+        print(a_tuple) # print complete list
+        # output: (1, 2.5, 'Speed')
+
+        print(a_tuple[0]) # prints the first element of the list
+        # output: 1
+
+        print(b_tuple[2]) # prints the third element of the list
+        # output: [1, 2]
+
+        b_tuple[1] = 2 # Invalid
+
+> Note: As we all know once the tuple is created it cannot be updated [size of the tuple can't be changed. And therefore we can't use assignment operator for mutating value inside of a tuple because tuples are immutable in nature. But if the consist of mutable object. i.e; A tuple consist of list. As in above example I have created a tuple named b_tuple with list inside of it so we can add/remove/update the elements of a list without affecting the size of tuple].
+
+        b_tuple[2][0] = 3 # changing the value of first element of list inside a tuple
+
+        print(b_tuple) # print complete list
+        # output: (5, 'CSE', [3, 2])
+
+###### Example:
+
+        tuple_data = (1, 2.5, 'Speed')
+        list_data = [1, 2.5, 'Speed']
+
+        tuple_data[1] = 3.14 # Invalid syntax with tuple
+        list_data[1] = 3.14 $ Valid syntax with list
+
+### Dictionary:
+
+> Dictionary is an ordered set of key: value pairs, with the requirement that the keys are unique( with one dictionary)
+
+> Unlike sequences, which are indexed by a range of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can be keys.
+
+###### Example:
+
+        a_dict =  {
+               'roll_no':'65',
+                'name': 'Sanjeev Sharma',
+                'branch': 'CSE'
+                }
+
+        print(a_dict['name']) # print value for 'name' key
+        # output: Sanjeev Sharma
+
+#### Creating Dictionary:
+
+        a_dict = {
+                'roll_no':'65',
+                'name': 'Sanjeev Sharma',
+                'branch': 'CSE'
+                 }
+        b_dict = {} # empty dictionary
+
+#### Accessing values in dictionary:
+
+        a_dict = {
+                'roll_no':'65',
+                'name': 'Sanjeev Sharma',
+                'branch': 'CSE'
+                 }
+        print(''''
+                a_dict['roll_no'] : { a_dict['roll_no'] }
+                a_dict['name'] : { a_dict['name'] }
+                a_dict['branch'] : { a_dict['branch'] }
+             ''')
+
+        # output:
+        '''
+                a_dict['roll_no'] : 65
+                a_dict['name'] : Sanjeev Sharma
+                a_dict['branch'] : CSE
+        '''
+
+#### Updating dictionary:
+
+> You can update a dictionary by adding a new entry or a key-value pair.
+
+###### Example:
+
+        a_dict = {
+                'roll_no':'65',
+                'name': 'Sanjeev Sharma',
+                'branch': 'CSE'
+                 }
+
+        print("Dictionary before updation: ", a_dict)
+
+        a_dict['roll_no'] = 09
+        a_dict['name'] = "Nik"
+        a_dict['branch'] = "ECE"
+        print("Dictionary after updation: ", a_dict)
+
+        # output:
+        '''
+        Dictionary before updation: { 'roll_no' : 65, 'name' : 'Sanjeev Sharma', 'branch' : "CSE" }
+
+        Dictionary after updation: { 'roll_no' : 09, 'name' : 'Nik', 'branch' : "ECE" }
+        '''
+
+#### Delete dictionary element:
+
+> You can remove individual dictionary elements use del statement.
+
+###### Example:
+
+        a_dict = {
+                'roll_no':'65',
+                'name': 'Sanjeev Sharma',
+                'branch': 'CSE'
+                 }
+
+        print(a_dict)
+
+        del a_dict['roll_no']
+        print(a_dict)
+        del a_dict
+        print(a_dict) # An exception is raised because after del a_dict, the dictionary does not exist anymore
+
+        # output:
+        '''
+        { 'roll_no' : 65, 'name' : 'Sanjeev Sharma', 'branch' : "CSE" }
+        { 'name' : 'Sanjeev Sharma', 'branch' : "CSE" }
+        NameError: name 'a_dict' is not defined
+        '''
+
+#### Properties of Dictionary keys:
+
+> There are two important points to remember about dictionary keys:
+>
+> - More than on entry per key is not allowed. This means no duplicate key is allowed when duplicate keys are encountered during assignment, the last assignment is to be considered.
+> - Keys must be immutable. This means you can use strings, number or tuples as dictionary keys but something like ['key'] is not allowed.
+
+### Built-in Dictionary Functions & Methods:
+
+> 1. len() - This method returns length of the dictionary.
+
+###### Syntax: len(dict)
+
+        a_dict = {
+                'roll_no':'65',
+                'name': 'Sanjeev Sharma',
+                'branch': 'CSE'
+          }
+
+        print(len(a_dict)) # output: 3
+
+> 2. str() - This method produces a printable string representation of a dictionary.
+
+###### Syntax: str(dict)
+
+        a_dict = {
+                'roll_no':'65',
+                'name': 'Sanjeev Sharma',
+                'branch': 'CSE'
+          }
+
+        print(str(a_dict))
+
+        # output: {'roll_no': '65', 'name': 'Sanjeev Sharma', 'branch': 'CSE'}
+
+> 3. type() - This method return the type of the passed variable. If passed variable is dictionary then it would return a dictionary type.
+
+###### Syntax: type(dict)
+
+        a_dict = {
+                'roll_no':'65',
+                'name': 'Sanjeev Sharma',
+                'branch': 'CSE'
+          }
+
+        print(type(a_dict)) # output: <class 'dict'>
+
+> 4. clear() - This method removes all items from the dictionary.
+
+###### Syntax: dict.clear()
+
+        a_dict = {
+                'roll_no':'65',
+                'name': 'Sanjeev Sharma',
+                'branch': 'CSE'
+          }
+
+        a_dict.clear()
+        print(a_dict) # output: {}
+
+> 5. copy() - This method returns a copy of the dictionary.
+
+###### Syntax: dict.copy()
+
+        a_dict = {
+                'roll_no':'65',
+                'name': 'Sanjeev Sharma',
+                'branch': 'CSE'
+          }
+
+        b_dict = a_dict.copy()
+        print(b_dict)
+
+        # output: {'roll_no': '65', 'name': 'Sanjeev Sharma', 'branch': 'CSE'}
+
+> 6. fromkeys() - This method create a new dictionary with keys from sequence and values set to value
+
+###### Syntax: dict.fromkeys(sequence[, values])
+
+        a_dict = {}
+
+        keys = ['a', 'e', 'i', 'o', 'u']
+
+        print(a_dict.fromkeys(keys)) # without value
+
+        value = 'vowels'
+
+        print(a_dict.fromkeys(keys, value)) # with value
+
+        # output:
+        '''
+        {'a': None, 'e': None, 'i': None, 'o': None, 'u': None}
+        {'a': 'vowels', 'e': 'vowels', 'i': 'vowels', 'o': 'vowels', 'u': 'vowels'}
+        '''
+
+> 7. get() - This method returns a value from the given dictionary by passing key in it. If the key is not available then it returns default value None.
+
+###### Syntax: dict.get(key, default=None)
+
+        a_dict = {
+                'roll_no': '65',
+                'name': 'Sanjeev Sharma',
+                'branch': 'CSE'
+                 }
+
+        print(a_dict.get('name'))
+
+        # output: Sanjeev Sharma
+
+> 8. items() - This method returns a lift of dictionary(key, value) tuple pairs.
+
+###### Syntax: dict.items()
+
+        a_dict = {
+                'roll_no': '65',
+                'name': 'Sanjeev Sharma',
+                'branch': 'CSE'
+                 }
+
+        print(a_dict.items())
+
+        # output:
+        """
+        dict_items([('roll_no', '65'), ('name', 'Sanjeev Sharma'), ('branch', 'CSE')])
+        """
+
+> 9. keys() - This method returns a list of all the available keys in the dictionary.
+
+###### Syntax: dict.keys()
+
+        a_dict = {
+                'roll_no': '65',
+                'name': 'Sanjeev Sharma',
+                'branch': 'CSE'
+                 }
+
+        print(a_dict.keys())
+
+        # output: dict_keys(['roll_no', 'name', 'branch'])
+
+> 10. setdefault() - This method is similar to get(), but will set dict[key] = default if the key is not already in dict.
+
+###### Syntax: dict.setdefault(key, default=None)
+
+        a_dict = {
+                'roll_no': '65',
+                'branch': 'CSE'
+                 }
+
+        a_dict.setdefault('name' )
+        print(a_dict)
+
+        # output: {'roll_no': '65', 'branch': 'CSE', 'name': None}
+
+> 11. update() - This method adds key-values pairs of another dictionary into a given dictionary.
+
+###### Syntax: a_dict.update(b_dict)
+
+        a_dict = {
+                'roll_no': '65',
+                'branch': 'CSE'
+                 }
+
+        b_dict = {
+                'name': 'Sanjeev Sharma'
+                 }
+
+        a_dict.update(b_dict)
+        print(a_dict)
+
+        # output: {'roll_no': '65', 'branch': 'CSE', 'name': 'Sanjeev Sharma'}
+
+> 12. values() - This methods returns a list of all values available in a given dictionary.
+
+###### Syntax: dict.values()
+
+        a_dict = {
+                'roll_no': '65',
+                'name': 'Sanjeev Sharma',
+                'branch': 'CSE'
+                 }
+
+        print(a_dict.values())
+
+        # output: dict_values(['65', 'Sanjeev Sharma', 'CSE'])
