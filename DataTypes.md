@@ -623,3 +623,226 @@
         print(a_dict.values())
 
         # output: dict_values(['65', 'Sanjeev Sharma', 'CSE'])
+
+### Sets
+
+> A set is an an unordered collections of items. Every element is unique (no duplicates) & must be immutable (which cannot be changed)
+
+#### Creating a set
+
+> A set is created by placing all the items (elements) inside curly braces {} seperated byb comma or by using the built-in function set()
+> It can have an umber of items & they may be of different types(integer, float, tuples, string etc). But a set cannot have a mutable element like list or dictionary as its elements.
+
+        a_set = { 8.5, 'Speed', (1, 2, 3)}
+        # alternate way using set() function
+        a_set = set([8.5, 'Speed', (1, 2, 3)])
+
+        # to create a empty set
+        a_set = set()
+
+#### Set operations:
+
+> Sets can be used to carry to out mathematical set operations like union, intersection, difference & symmetric difference.
+
+> 1. Set Union: Union of A & B is a set of all elements from both sets.
+>    > Union is performed using | operator
+
+        a_set = {1, 2, 3, 4, 5}
+        b_set = {4, 5, 6, 7, 8}
+        print(a_set | b_set)
+
+        # output: {1, 2, 3, 4, 5, 6, 7, 8}
+
+> 2. Set Intersection: Union of A & B is a set of elements that are common in both sets.
+>    > Intersection is performed using & operator
+
+        a_set = {1, 2, 3, 4, 5}
+        b_set = {4, 5, 6, 7, 8}
+        print(a_set & b_set)
+
+        # output: {4, 5}
+
+> 3. Set Difference: Difference of A and B (A-B) is a set of elements that are only in A but not in B.
+>    > Similarly, B-A is a set of elements that are only in B but not in A.
+>    >
+>    > > Difference is performed using - operator
+
+        a_set = {1, 2, 3, 4, 5}
+        b_set = {4, 5, 6, 7, 8}
+        print(a_set - b_set)
+        print(b_set - a_set)
+
+        # output:
+        # {1, 2, 3}
+        # {8, 6, 7}
+
+4.  Set Symmetric difference:
+
+    > Symmetric difference of A and B is a set of elements in both A and B except those that are common in both.
+    >
+    > > Symmetric difference is performed using ^ operator
+
+            a_set = {1, 2, 3, 4, 5}
+            b_set = {4, 5, 6, 7, 8}
+            print(a_set ^ b_set)
+
+            # output: {1, 2, 3, 6, 7, 8}
+
+> 5. add(): Add an element to a set
+
+###### Syntax: setobj.add(element)
+
+##### Example:
+
+        a_set = {1, 2, 3, 4, 5}
+        a_set.add(6)
+        print(a_set)
+
+        # output: {1, 2, 3, 4, 5, 6}
+
+> 6. clear(): Remove all elements from a set
+
+###### Syntax: setobj.copy(element)
+
+##### Example:
+
+        a_set = {1, 2, 3, 4, 5}
+        print("a_set: ", a_set)
+        b_set = a_set.copy()
+        print("b_set: ", b_set)
+
+        # output:
+        # a_set:  {1, 2, 3, 4, 5}
+        # b_set:  {1, 2, 3, 4, 5}
+
+> 7. difference_update(): Remove all elements of another set from this set.
+
+###### Syntax: setobj_1.difference_update(setobj_2)
+
+##### Example:
+
+        a_set = {1, 2, 3, 4, 5}
+        b_set = {4, 5, 6, 7, 8}
+        a_set.difference_update(b_set)
+        print(a_set)
+
+        # output: {1, 2, 3}
+
+> 8. intersection_update(): Update the set with the intersection of itself and another.
+
+###### Syntax: setobj_1.intersection_update(setobj_2)
+
+##### Example:
+
+        a_set = {1, 2, 3, 4, 5}
+        b_set = {4, 5, 6, 7, 8}
+        a_set.intersection_update(b_set)
+        print(a_set)
+
+        # output: {4, 5}
+
+> 9. isdisjoint(): Return True if two sts have a null intersection
+
+###### Syntax: setobj_1.isdisjoint(setobj_2)
+
+##### Example:
+
+        a_set = {1, 2, 3, 4, 5}
+        b_set = {4, 5, 6, 7, 8}
+        print(a_set.isdisjoint(b_set))
+
+        # output: False
+
+> 10. issubset(): Return True if another set contains this set
+
+###### Syntax: setobj_1.issubset(setobj_2)
+
+##### Example:
+
+        a_set = {1, 2, 3, 4, 5}
+        b_set = {4, 5, 6, 7, 8}
+        print(a_set.issubset(b_set))
+
+        # output: False
+
+> 11. issuperset(): Return True if this set contains another set
+
+###### Syntax: setobj_1.issuperset(setobj_2)
+
+##### Example:
+
+        a_set = {1, 2, 3, 4, 5}
+        b_set = {4, 5, 6, 7, 8}
+        print(a_set.issuperset(b_set))
+
+        # output: False
+
+> 12. pop(): Remove and return an arbitary set element. Raise key error if the set is empty.
+
+###### Syntax: setobj.pop()
+
+##### Example:
+
+        a_set = {1, 2, 3, 4, 5}
+        print(f"a_set: {a_set}")
+        b_set = a_set.pop()
+        print(f"b_set: {b_set}")
+
+        # output:
+        # a_set: {1, 2, 3, 4, 5}
+        # b_set: 1
+
+> 13. symmetric_difference(): Return the symmetric difference of two sets as a new set
+
+###### Syntax: setobj_1.symmetric_difference(setobj_2)
+
+##### Example:
+
+        a_set = {1, 2, 3, 4, 5}
+        b_set = {4, 5, 6, 7, 8}
+        print(a_set.symmetric_difference(b_set))
+
+        # output: {1, 2, 3, 6, 7, 8}
+
+> 14. symmetric_difference_update(): Update a set with the symmetric difference of itself and another
+
+###### Syntax: setobj_1.symmetric_difference_update(setobj_2)
+
+##### Example:
+
+        a_set = {1, 2, 3, 4, 5}
+        b_set = {4, 5, 6, 7, 8}
+        a_set.symmetric_difference_update(b_set)
+        print(a_set)
+
+        # output: {1, 2, 3, 6, 7, 8}
+
+> 15. update(): Update a set with union of itself & other
+
+###### Syntax: setobj_1.update(listobj [, setobj_2])
+
+##### Example:
+
+        a_set = {1, 2, 3, 4, 5}
+        b_set = {4, 5, 6, 7, 8}
+        listobj = [9, 10, 11, 12, 13, 14, 15]
+
+        a_set.update(listobj) # without b_set
+        print(a_set)
+
+        # output: {1, 2, 3, 4, 5, 9, 10, 11, 12, 13, 14, 15}
+
+        a_set.update(listobj) # with b_set
+        print(a_set)
+
+        # output: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
+
+> 16. discard(): Remove an element from set if it is a member. Do noting if the element is not in set
+
+###### Syntax: setobj.discard(element)
+
+##### Example:
+
+        a_set = {1, 2, 3, 4, 5}
+        a_set.discard(5)
+        print(a_set)
