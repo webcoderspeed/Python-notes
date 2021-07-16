@@ -846,3 +846,5 @@
         a_set = {1, 2, 3, 4, 5}
         a_set.discard(5)
         print(a_set)
+
+        # output: {1, 2, 3, 4}
