@@ -8,7 +8,7 @@
 >- 6) Membership Operators
 >- 7) Identity Operators
 
-#### <strong>Arthmetic operators:</strong>
+#### Arthmetic operators:
 > Assume: a=10, b=20
    <table>
     <tr>
@@ -53,7 +53,7 @@
     </tr>
   </table>
 
-#### <strong>Comparsion operators:</strong>
+#### Comparsion operators: 
 > These operators compare the values on either sides of them and decide the relation among them. They are also called Relation Operators.
 >> Assume a = 10, b = 20
 
@@ -100,7 +100,7 @@
     </tr>
   </table>
 
-#### <strong>Assignment operators:</strong>
+#### Assignment operators: 
 > An assignment operator is the operator used to assign a new value a variable
 >> Assume a=10, b=20
 
@@ -152,7 +152,7 @@
     </tr>
   </table>
 
-#### <strong>Logical operators:</strong>
+#### Logical operators: 
 > Logical operators are typically used with Boolean values
 >> Assume a = True, b = False
 
@@ -263,7 +263,7 @@
     </tr>
 </table>
 
-#### <strong>Bitwise operators:</strong>
+#### Bitwise operators: 
 > Bitwise operator works on bits and performs bit-by-bit operation
 >> Assume a = 60, b = 13
 
@@ -305,7 +305,7 @@
     </tr>
 </table>
 
-#### <strong>Membership operators:</strong>
+#### Membership operators: 
 > Membership operators test for membership in a sequence such as strings, list or tuples.
 
 <table>
@@ -335,7 +335,7 @@
     </tr>
 </table>
 
-#### <strong>Identity operators:</strong>
+#### Identity operators: 
 > Identity operators compare the memory locations of two objects.
 
 <table>
@@ -366,8 +366,8 @@
     </tr>
 </table>
 
-#### <strong>Operators precendance:</strong>
-> <strong>PEMDAS:</strong> Power Exponent Multiplication Divide Addition Substraction
+#### Operators precendance: 
+> PEMDAS:  Power Exponent Multiplication Divide Addition Substraction
 > The following table list all the operators from highest precedence to the lowest:
 
   <table>
@@ -421,7 +421,7 @@
     </tr>
 </table>
 
-#### <strong>Variable formatting:</strong>
+#### Variable formatting: 
 > Three ways by which you can format a variable.
 >- 1) Using format() function and {}
 
